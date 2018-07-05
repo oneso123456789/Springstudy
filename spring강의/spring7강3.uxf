@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>170</y>
+      <w>470</w>
+      <h>420</h>
+    </coordinates>
+    <panel_attributes>&lt;bean id="student" class="com.javalec.ex.Student" scope="singleton"&gt;
+  &lt;constructor-arg value="홍길순"&gt;&lt;/constructor-arg&gt;
+  &lt;constructor-arg value="30"&gt;&lt;/constructor-arg&gt;
+&lt;/bean&gt;
+
+Student student1 = ctx.getBean("student",Student.class);
+System.out.println("이름 : " + student1.getName());
+System.out.println("나이 : " + student1.getAge()); 
+
+System.out.pirntln("==================================");
+
+Student studnet2 = ctx.getBean("studentt".Stduent.class);
+student2.setName("홀길자");
+studnet2.setAge("100");
+
+Systme.out.println("이름 : " + student2.getName());
+Systme.out.println("나이 : " + student2.getAge());
+
+System.out.pirntln("==================================");
+
+if(student1.equals(student2){
+	System.out.println("student1 == student2");
+}else{
+   System.out.println("student1 != student2");
+}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>50</x>
+      <y>60</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>스프링 빈 범위
+(scope)
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>590</x>
+      <y>230</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>이름 : 홍길순
+나이 : 30
+
+
+======================
+이름 : 홀길자
+나이 : 100
+
+======================
+Student1 == student2
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>240</y>
+      <w>230</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>210.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>330</y>
+      <w>230</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>210.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+</diagram>

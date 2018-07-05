@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>80</y>
+      <w>350</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>@Override
+public void afterPropertiesSet() throws Exception{
+	System.out.println("afterPropertiesSet();
+}
+
+
+
+@Override
+public void destroy() throws Exception{
+	System.out.println("destroy()");
+}
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>0</y>
+      <w>380</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1)implements initializingBean, DisposableBean
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>100</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+group=1</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>90</y>
+      <w>200</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>빈 초기화 과정에서 호출 됩니다.
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>220</y>
+      <w>200</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>빈 소멸 과정에서 생성됩니다
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>220</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+group=1</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>910</x>
+      <y>60</y>
+      <w>320</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>GenericXmlApplicationCotext ctx =
+new GenericXmlApplicationContext();
+
+
+     ctx.load("classpath:applicationCTX.xml");
+
+ctx.refresh();
+
+
+
+ctx.close();
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>820</x>
+      <y>90</y>
+      <w>230</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+group=1</panel_attributes>
+    <additional_attributes>210.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>220</y>
+      <w>200</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+group=1</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>910</x>
+      <y>310</y>
+      <w>360</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>[참고 하세요]
+ctx.close()의 경우 컨테이너가 소멸 하는 단계입니다.
+컨테이너가 소멸 하면, 빈은 자동 소멸됩니다.
+빈만 소멸하게 한다면, 
+student.destroy() API를 이용해야합니다.
+
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>80</x>
+      <y>0</y>
+      <w>1230</w>
+      <h>510</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+group=1</panel_attributes>
+    <additional_attributes>790.0;10.0;1210.0;20.0;1210.0;490.0;10.0;490.0;30.0;40.0;410.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>470</x>
+      <y>550</y>
+      <w>380</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>2) @PostConstruct, @PreDestroy
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>60</x>
+      <y>550</y>
+      <w>1230</w>
+      <h>510</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>790.0;10.0;1210.0;20.0;1210.0;490.0;10.0;490.0;30.0;40.0;410.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>140</x>
+      <y>670</y>
+      <w>350</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>@PostConstruct
+public void initMethod(){
+	System.out.println("initMethod()");
+}
+
+
+
+@PreDestroy
+public void destroyMethod() {
+	System.out.println("destroyMethod()");
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>350</x>
+      <y>0</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>스프링 빈 생명주기
+1.implements사용
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>680</y>
+      <w>140</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>820</y>
+      <w>140</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>680</y>
+      <w>230</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>빈 초기화 과정에서 호출됩니다.
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>820</y>
+      <w>230</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>빈 소멸 과정에서 생성됩니다.
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>960</x>
+      <y>620</y>
+      <w>270</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>GenericXmlApplicationContext ctx=
+new GenericXmlApplicationContext();
+
+
+ctx.load("classpath:applicationCTX.xml");
+
+
+ctx.refresh();
+
+
+
+
+ctx.close();
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>870</x>
+      <y>690</y>
+      <w>180</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>820</y>
+      <w>190</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>320</x>
+      <y>580</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>스프링 빈 생명주기
+2. Annotation사용
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

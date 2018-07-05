@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>636</x>
+      <y>132</y>
+      <w>36</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Student</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>492</x>
+      <y>64</y>
+      <w>108</w>
+      <h>92</h>
+    </coordinates>
+    <panel_attributes>StudentInfo
+
+생성자()
+setter()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>440</x>
+      <y>132</y>
+      <w>36</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Student</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>608</x>
+      <y>168</y>
+      <w>96</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>Student.java
+--
+Student student2 = 
+ctx.getBean("student2",Student.class);
+studentInfo.setStudent(student2);
+studentInfo.getStudentInfo();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>456</x>
+      <y>108</y>
+      <w>84</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+fg=red</panel_attributes>
+    <additional_attributes>190.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>424</x>
+      <y>168</y>
+      <w>96</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>applicationCTX.xml
+--
+&lt;bean id="studentInfo" 
+class="com.javalec.ex.StudentInfo"&gt;
+	&lt;constructor-arg&gt;
+		&lt;ref bean="student1"&gt;
+	&lt;/constructor-arg&gt;
+&lt;/bean&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>552</x>
+      <y>116</y>
+      <w>108</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+fg=red</panel_attributes>
+    <additional_attributes>10.0;10.0;250.0;80.0</additional_attributes>
+  </element>
+</diagram>
