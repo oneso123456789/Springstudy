@@ -19,12 +19,16 @@ public class TestController { //redirect:는 컨트롤러안에서만 하는게 좋음
 			if(username.equals("test") && password.equals("1234")) {
 				
 				System.out.println("성공");
-				return "redirect:/";	
+				return "redirect:/gomgom";	
 			} else {
 				
 			}
-		
+			
 			return "redirect:/test/login";
+	}
+	@RequestMapping("/gomgom")
+	public String gomgom() {
+		return "/student/studentURL1";
 	}
 
 }
