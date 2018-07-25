@@ -41,18 +41,18 @@ public class RedirectController {
 	}
 	
 	
-	@RequestMapping("/studentURL11")
+	@RequestMapping("/studentURL2")
 	public String studentURL2(Model model) {
 		
 		 
-		return "studentURL2";
+		return "redirect:student/studentURL2";
 	}
-	
+	 
 	@RequestMapping("/student/studentURL2")
 	public String studentURL22(Model model) {
 		
-		return "studentURL2";
-	}
+		return "/studentURL2";
+	} 
 	
 	
 }
